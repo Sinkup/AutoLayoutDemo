@@ -15,6 +15,8 @@
 		025F84F81AFB5A7C00E56BB0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 025F84F71AFB5A7C00E56BB0 /* Images.xcassets */; };
 		025F84FB1AFB5A7C00E56BB0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025F84F91AFB5A7C00E56BB0 /* LaunchScreen.xib */; };
 		025F85071AFB5A7C00E56BB0 /* AutoLayoutDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 025F85061AFB5A7C00E56BB0 /* AutoLayoutDemoTests.m */; };
+		025F85121AFB659D00E56BB0 /* PALEdgesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025F85111AFB659D00E56BB0 /* PALEdgesViewController.m */; };
+		025F85151AFB705D00E56BB0 /* IBALEdgesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025F85141AFB705D00E56BB0 /* IBALEdgesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,10 @@
 		025F85001AFB5A7C00E56BB0 /* AutoLayoutDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoLayoutDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		025F85051AFB5A7C00E56BB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		025F85061AFB5A7C00E56BB0 /* AutoLayoutDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutDemoTests.m; sourceTree = "<group>"; };
+		025F85101AFB659D00E56BB0 /* PALEdgesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PALEdgesViewController.h; sourceTree = "<group>"; };
+		025F85111AFB659D00E56BB0 /* PALEdgesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PALEdgesViewController.m; sourceTree = "<group>"; };
+		025F85131AFB705D00E56BB0 /* IBALEdgesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBALEdgesViewController.h; sourceTree = "<group>"; };
+		025F85141AFB705D00E56BB0 /* IBALEdgesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBALEdgesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,10 @@
 				025F84EF1AFB5A7C00E56BB0 /* MasterViewController.m */,
 				025F84F11AFB5A7C00E56BB0 /* DetailViewController.h */,
 				025F84F21AFB5A7C00E56BB0 /* DetailViewController.m */,
+				025F85101AFB659D00E56BB0 /* PALEdgesViewController.h */,
+				025F85111AFB659D00E56BB0 /* PALEdgesViewController.m */,
+				025F85131AFB705D00E56BB0 /* IBALEdgesViewController.h */,
+				025F85141AFB705D00E56BB0 /* IBALEdgesViewController.m */,
 				025F84F41AFB5A7C00E56BB0 /* Main.storyboard */,
 				025F84F71AFB5A7C00E56BB0 /* Images.xcassets */,
 				025F84F91AFB5A7C00E56BB0 /* LaunchScreen.xib */,
@@ -227,6 +237,8 @@
 				025F84ED1AFB5A7C00E56BB0 /* AppDelegate.m in Sources */,
 				025F84F01AFB5A7C00E56BB0 /* MasterViewController.m in Sources */,
 				025F84EA1AFB5A7C00E56BB0 /* main.m in Sources */,
+				025F85151AFB705D00E56BB0 /* IBALEdgesViewController.m in Sources */,
+				025F85121AFB659D00E56BB0 /* PALEdgesViewController.m in Sources */,
 				025F84F31AFB5A7C00E56BB0 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

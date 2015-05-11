@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IBALEdgesViewController : UIViewController
+@interface IBEdgesViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIView *containerView;
 

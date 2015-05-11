@@ -10,9 +10,6 @@
 
 @interface PALEdgesViewController ()
 
-@property (nonatomic, strong) UIView *containterView;
-@property (nonatomic) BOOL shrinked;
-
 @end
 
 @implementation PALEdgesViewController
@@ -20,28 +17,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    self.edgesForExtendedLayout = UIRectEdgeNone;
     
-    self.containterView = [[UIView alloc] initWithFrame:UIEdgeInsetsInsetRect(self.view.bounds, UIEdgeInsetsMake(72, 16, 8, 16))];
-    self.containterView.backgroundColor = [UIColor lightGrayColor];
-    [self.view addSubview:self.containterView];
+//    self.containterView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    // 需将该属性置为NO，否则会发生冲突
+    self.containerView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1. constant:72];
+    NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1. constant:-8];
+    NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1. constant:16];
+    NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1. constant:-16];
+    
+    [self.view addSubview:self.containerView];
+    [self.view addConstraints:@[ top, bottom, left, right ]];
     
     UIEdgeInsets edge = UIEdgeInsetsMake(8, 8, 8, 8);
-    UIImageView *view = [[UIImageView alloc] initWithFrame:UIEdgeInsetsInsetRect(self.containterView.bounds, edge)];
+    // 使用Auto Layout，无需设置frame
+    UIImageView *view = [[UIImageView alloc] init];//WithFrame:UIEdgeInsetsInsetRect(self.containerView.bounds, edge)
     view.backgroundColor = [UIColor orangeColor];
-//    view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    view.translatesAutoresizingMaskIntoConstraints = NO;
     
-    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.containterView attribute:NSLayoutAttributeTop multiplier:1. constant:edge.top];
-    NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:self.containterView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeBottom multiplier:1. constant:edge.bottom];
-    NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.containterView attribute:NSLayoutAttributeLeading multiplier:1. constant:edge.left];
-    NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.containterView attribute:NSLayoutAttributeTrailing multiplier:1. constant:edge.right];
+    top = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.containerView attribute:NSLayoutAttributeTop multiplier:1. constant:edge.top];
+    bottom = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.containerView attribute:NSLayoutAttributeBottom multiplier:1. constant:-edge.bottom];
+    left = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.containerView attribute:NSLayoutAttributeLeading multiplier:1. constant:edge.left];
+    right = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.containerView attribute:NSLayoutAttributeTrailing multiplier:1. constant:-edge.right];
 
-    [self.containterView addSubview:view];
-    [self.containterView addConstraints:@[ top, bottom, left, right ]];
+    [self.containerView addSubview:view];
+    [self.containerView addConstraints:@[ top, bottom, left, right ]];
     
-    
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(update:)];
-    self.navigationItem.rightBarButtonItem = addButton;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,19 +70,66 @@
 - (void)update:(id)sender
 {
     if (self.shrinked) {
-        self.containterView.frame = UIEdgeInsetsInsetRect(self.view.bounds, UIEdgeInsetsMake(72, 16, 8, 16));
-        self.shrinked = NO;
+        for (NSLayoutConstraint *constraint in self.view.constraints) {
+            if (constraint.firstItem != self.containerView) {
+                continue;
+            }
+            
+            switch (constraint.firstAttribute) {
+                case NSLayoutAttributeTop:
+                    constraint.constant = 72;
+                    break;
+                case NSLayoutAttributeBottom:
+                    constraint.constant = -8;
+                    break;
+                case NSLayoutAttributeLeading:
+                    constraint.constant = 16;
+                    break;
+                case NSLayoutAttributeTrailing:
+                    constraint.constant = -16;
+                    break;
+                    
+                default:
+                    break;
+            }
+        }
     } else {
-        self.containterView.frame = UIEdgeInsetsInsetRect(self.view.bounds, UIEdgeInsetsMake(100, 64, 8, 128));
-        self.shrinked = YES;
+        for (NSLayoutConstraint *constraint in self.view.constraints) {
+            if (constraint.firstItem != self.containerView) {
+                continue;
+            }
+            
+            switch (constraint.firstAttribute) {
+                case NSLayoutAttributeTop:
+                    constraint.constant = 200;
+                    break;
+                case NSLayoutAttributeBottom:
+                    constraint.constant = -200;
+                    break;
+                case NSLayoutAttributeLeading:
+                    constraint.constant = 100;
+                    break;
+                case NSLayoutAttributeTrailing:
+                    constraint.constant = -100;
+                    break;
+                    
+                default:
+                    break;
+            }
+        }
     }
     
-    [self.containterView setNeedsLayout];
+    [UIView animateWithDuration:0.5 animations:^{
+        [self.view layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        self.shrinked = !self.shrinked;
+    }];
 }
 
-//- (void)updateViewConstraints
-//{
-//    [super updateViewConstraints];
-//}
+
+- (void)updateViewConstraints
+{
+    [super updateViewConstraints];
+}
 
 @end

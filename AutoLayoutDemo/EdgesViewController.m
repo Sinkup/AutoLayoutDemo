@@ -1,24 +1,23 @@
 //
-//  IBALEdgesViewController.m
+//  EdgesViewController.m
 //  AutoLayoutDemo
 //
-//  Created by ChenHao on 15/5/7.
+//  Created by ChenHao on 15/5/8.
 //  Copyright (c) 2015年 ChenHao. All rights reserved.
 //
 
-#import "IBALEdgesViewController.h"
+#import "EdgesViewController.h"
 
-@interface IBALEdgesViewController ()
-
-@property (nonatomic) BOOL shrinked;
+@interface EdgesViewController ()
 
 @end
 
-@implementation IBALEdgesViewController
+@implementation EdgesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(update:)];
     self.navigationItem.rightBarButtonItem = addButton;
 }
@@ -38,17 +37,27 @@
 }
 */
 
-- (void)update:(id)sender
+- (UIView *)containerView
 {
-    if (self.shrinked) {
-        self.containerView.frame = UIEdgeInsetsInsetRect(self.view.bounds, UIEdgeInsetsMake(72, 16, 8, 16));
-        self.shrinked = NO;
-    } else {
-        self.containerView.frame = UIEdgeInsetsInsetRect(self.view.bounds, UIEdgeInsetsMake(100, 64, 8, 128));
-        self.shrinked = YES;
+    if (!_containerView) {
+        _containerView = [[UIView alloc] init];//WithFrame:UIEdgeInsetsInsetRect(self.view.bounds, UIEdgeInsetsMake(72, 16, 8, 16))
+        _containerView.backgroundColor = [UIColor lightGrayColor];
+        
+        [self.view addSubview:_containerView];
     }
     
-    [self.containerView updateConstraintsIfNeeded];
+    return _containerView;
+}
+
+- (void)update:(id)sender
+{
+//    if (self.shrinked) {
+//        self.containterView.frame = UIEdgeInsetsInsetRect(self.view.bounds, UIEdgeInsetsMake(72, 16, 8, 16));
+//        self.shrinked = NO;
+//    } else {
+//        self.containterView.frame = UIEdgeInsetsInsetRect(self.view.bounds, UIEdgeInsetsMake(100, 64, 8, 128));
+//        self.shrinked = YES;
+//    }
 }
 
 @end

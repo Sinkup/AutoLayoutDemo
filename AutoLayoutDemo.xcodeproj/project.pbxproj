@@ -16,7 +16,11 @@
 		025F84FB1AFB5A7C00E56BB0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025F84F91AFB5A7C00E56BB0 /* LaunchScreen.xib */; };
 		025F85071AFB5A7C00E56BB0 /* AutoLayoutDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 025F85061AFB5A7C00E56BB0 /* AutoLayoutDemoTests.m */; };
 		025F85121AFB659D00E56BB0 /* PALEdgesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025F85111AFB659D00E56BB0 /* PALEdgesViewController.m */; };
-		025F85151AFB705D00E56BB0 /* IBALEdgesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025F85141AFB705D00E56BB0 /* IBALEdgesViewController.m */; };
+		025F85151AFB705D00E56BB0 /* IBEdgesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025F85141AFB705D00E56BB0 /* IBEdgesViewController.m */; };
+		025F85181AFC5B2600E56BB0 /* MASEdgesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025F85171AFC5B2600E56BB0 /* MASEdgesViewController.m */; };
+		025F851B1AFC5F9900E56BB0 /* EdgesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025F851A1AFC5F9900E56BB0 /* EdgesViewController.m */; };
+		025F85221AFC957600E56BB0 /* PLEdgesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025F85211AFC957600E56BB0 /* PLEdgesViewController.m */; };
+		32884FE3960D9978F80C91BA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F0B04D49BB394862506928 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +51,17 @@
 		025F85061AFB5A7C00E56BB0 /* AutoLayoutDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutDemoTests.m; sourceTree = "<group>"; };
 		025F85101AFB659D00E56BB0 /* PALEdgesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PALEdgesViewController.h; sourceTree = "<group>"; };
 		025F85111AFB659D00E56BB0 /* PALEdgesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PALEdgesViewController.m; sourceTree = "<group>"; };
-		025F85131AFB705D00E56BB0 /* IBALEdgesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBALEdgesViewController.h; sourceTree = "<group>"; };
-		025F85141AFB705D00E56BB0 /* IBALEdgesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBALEdgesViewController.m; sourceTree = "<group>"; };
+		025F85131AFB705D00E56BB0 /* IBEdgesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBEdgesViewController.h; sourceTree = "<group>"; };
+		025F85141AFB705D00E56BB0 /* IBEdgesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBEdgesViewController.m; sourceTree = "<group>"; };
+		025F85161AFC5B2600E56BB0 /* MASEdgesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASEdgesViewController.h; sourceTree = "<group>"; };
+		025F85171AFC5B2600E56BB0 /* MASEdgesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASEdgesViewController.m; sourceTree = "<group>"; };
+		025F85191AFC5F9900E56BB0 /* EdgesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdgesViewController.h; sourceTree = "<group>"; };
+		025F851A1AFC5F9900E56BB0 /* EdgesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EdgesViewController.m; sourceTree = "<group>"; };
+		025F85201AFC957600E56BB0 /* PLEdgesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLEdgesViewController.h; sourceTree = "<group>"; };
+		025F85211AFC957600E56BB0 /* PLEdgesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLEdgesViewController.m; sourceTree = "<group>"; };
+		2D6299519C45DB8AA44CE83B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		73A730DA460A8DC40F7C8207 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F5F0B04D49BB394862506928 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32884FE3960D9978F80C91BA /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +89,8 @@
 				025F84E61AFB5A7C00E56BB0 /* AutoLayoutDemo */,
 				025F85031AFB5A7C00E56BB0 /* AutoLayoutDemoTests */,
 				025F84E51AFB5A7C00E56BB0 /* Products */,
+				E113188CC142ECB24AB3113A /* Pods */,
+				4A8BEAB96791A3DEDE895FC4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,10 +112,11 @@
 				025F84EF1AFB5A7C00E56BB0 /* MasterViewController.m */,
 				025F84F11AFB5A7C00E56BB0 /* DetailViewController.h */,
 				025F84F21AFB5A7C00E56BB0 /* DetailViewController.m */,
-				025F85101AFB659D00E56BB0 /* PALEdgesViewController.h */,
-				025F85111AFB659D00E56BB0 /* PALEdgesViewController.m */,
-				025F85131AFB705D00E56BB0 /* IBALEdgesViewController.h */,
-				025F85141AFB705D00E56BB0 /* IBALEdgesViewController.m */,
+				025F85231AFC959E00E56BB0 /* Base */,
+				025F851C1AFC945300E56BB0 /* Interface Builder */,
+				025F851D1AFC946600E56BB0 /* Programmatically */,
+				025F851E1AFC948300E56BB0 /* PureLayout */,
+				025F851F1AFC948A00E56BB0 /* Masonry */,
 				025F84F41AFB5A7C00E56BB0 /* Main.storyboard */,
 				025F84F71AFB5A7C00E56BB0 /* Images.xcassets */,
 				025F84F91AFB5A7C00E56BB0 /* LaunchScreen.xib */,
@@ -134,6 +151,68 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		025F851C1AFC945300E56BB0 /* Interface Builder */ = {
+			isa = PBXGroup;
+			children = (
+				025F85131AFB705D00E56BB0 /* IBEdgesViewController.h */,
+				025F85141AFB705D00E56BB0 /* IBEdgesViewController.m */,
+			);
+			name = "Interface Builder";
+			sourceTree = "<group>";
+		};
+		025F851D1AFC946600E56BB0 /* Programmatically */ = {
+			isa = PBXGroup;
+			children = (
+				025F85101AFB659D00E56BB0 /* PALEdgesViewController.h */,
+				025F85111AFB659D00E56BB0 /* PALEdgesViewController.m */,
+			);
+			name = Programmatically;
+			sourceTree = "<group>";
+		};
+		025F851E1AFC948300E56BB0 /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				025F85201AFC957600E56BB0 /* PLEdgesViewController.h */,
+				025F85211AFC957600E56BB0 /* PLEdgesViewController.m */,
+			);
+			name = PureLayout;
+			sourceTree = "<group>";
+		};
+		025F851F1AFC948A00E56BB0 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				025F85161AFC5B2600E56BB0 /* MASEdgesViewController.h */,
+				025F85171AFC5B2600E56BB0 /* MASEdgesViewController.m */,
+			);
+			name = Masonry;
+			sourceTree = "<group>";
+		};
+		025F85231AFC959E00E56BB0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				025F85191AFC5F9900E56BB0 /* EdgesViewController.h */,
+				025F851A1AFC5F9900E56BB0 /* EdgesViewController.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		4A8BEAB96791A3DEDE895FC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5F0B04D49BB394862506928 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E113188CC142ECB24AB3113A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73A730DA460A8DC40F7C8207 /* Pods.debug.xcconfig */,
+				2D6299519C45DB8AA44CE83B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +220,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 025F850A1AFB5A7C00E56BB0 /* Build configuration list for PBXNativeTarget "AutoLayoutDemo" */;
 			buildPhases = (
+				D58F3FC1E135FD639E228B1C /* Check Pods Manifest.lock */,
 				025F84E01AFB5A7C00E56BB0 /* Sources */,
 				025F84E11AFB5A7C00E56BB0 /* Frameworks */,
 				025F84E21AFB5A7C00E56BB0 /* Resources */,
+				6F27F76B253E68E6F9A3F482 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -229,6 +310,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6F27F76B253E68E6F9A3F482 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D58F3FC1E135FD639E228B1C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		025F84E01AFB5A7C00E56BB0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -237,9 +351,12 @@
 				025F84ED1AFB5A7C00E56BB0 /* AppDelegate.m in Sources */,
 				025F84F01AFB5A7C00E56BB0 /* MasterViewController.m in Sources */,
 				025F84EA1AFB5A7C00E56BB0 /* main.m in Sources */,
-				025F85151AFB705D00E56BB0 /* IBALEdgesViewController.m in Sources */,
+				025F85221AFC957600E56BB0 /* PLEdgesViewController.m in Sources */,
+				025F85151AFB705D00E56BB0 /* IBEdgesViewController.m in Sources */,
+				025F85181AFC5B2600E56BB0 /* MASEdgesViewController.m in Sources */,
 				025F85121AFB659D00E56BB0 /* PALEdgesViewController.m in Sources */,
 				025F84F31AFB5A7C00E56BB0 /* DetailViewController.m in Sources */,
+				025F851B1AFC5F9900E56BB0 /* EdgesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +476,7 @@
 		};
 		025F850B1AFB5A7C00E56BB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73A730DA460A8DC40F7C8207 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AutoLayoutDemo/Info.plist;
@@ -369,6 +487,7 @@
 		};
 		025F850C1AFB5A7C00E56BB0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D6299519C45DB8AA44CE83B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AutoLayoutDemo/Info.plist;
@@ -430,6 +549,7 @@
 				025F850C1AFB5A7C00E56BB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		025F850D1AFB5A7C00E56BB0 /* Build configuration list for PBXNativeTarget "AutoLayoutDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +558,7 @@
 				025F850F1AFB5A7C00E56BB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

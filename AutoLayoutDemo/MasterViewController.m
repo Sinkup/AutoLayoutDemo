@@ -47,7 +47,9 @@
 //    }
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-    [[segue destinationViewController] setTitle:cell.textLabel.text];
+    UITableViewHeaderFooterView *headerView = [self.tableView headerViewForSection:indexPath.section];
+    NSString *title = [NSString stringWithFormat:@"%@-%@", headerView.textLabel.text, cell.textLabel.text];
+    [[segue destinationViewController] setTitle:title];
 }
 
 #pragma mark - Table View

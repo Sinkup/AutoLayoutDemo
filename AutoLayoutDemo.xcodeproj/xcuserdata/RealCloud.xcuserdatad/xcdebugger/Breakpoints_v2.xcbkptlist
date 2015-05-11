@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AutoLayoutDemo/PALEdgesViewController.m"
-            timestampString = "452761785.803381"
+            timestampString = "453018232.09445"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "-updateViewConstraints"
             landmarkType = "5">
          </BreakpointContent>

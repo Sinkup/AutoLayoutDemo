@@ -119,11 +119,22 @@
         }
     }
     
-    [UIView animateWithDuration:0.5 animations:^{
-        [self.view layoutIfNeeded];
-    } completion:^(BOOL finished) {
-        self.shrinked = !self.shrinked;
-    }];
+//    [UIView animateWithDuration:0.5 animations:^{
+//        [self.view layoutIfNeeded];
+//    } completion:^(BOOL finished) {
+//        self.shrinked = !self.shrinked;
+//    }];
+    
+    [UIView animateWithDuration:0.5
+                          delay:0
+         usingSpringWithDamping:0.6
+          initialSpringVelocity:0.8
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         [self.view layoutIfNeeded];
+                     } completion:^(BOOL finished) {
+                         self.shrinked = !finished ?: !self.shrinked;
+                     }];
 }
 
 

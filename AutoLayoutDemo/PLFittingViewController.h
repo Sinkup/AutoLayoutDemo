@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FittingViewController.h"
 
-@interface PLFitViewController : UIViewController
+@interface PLFittingViewController : FittingViewController
 
 @end

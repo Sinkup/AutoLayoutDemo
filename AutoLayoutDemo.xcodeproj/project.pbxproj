@@ -20,7 +20,11 @@
 		025F85181AFC5B2600E56BB0 /* MASEdgesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025F85171AFC5B2600E56BB0 /* MASEdgesViewController.m */; };
 		025F851B1AFC5F9900E56BB0 /* EdgesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025F851A1AFC5F9900E56BB0 /* EdgesViewController.m */; };
 		025F85221AFC957600E56BB0 /* PLEdgesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025F85211AFC957600E56BB0 /* PLEdgesViewController.m */; };
-		0267360D1B00915800DB42EC /* PLFitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0267360C1B00915800DB42EC /* PLFitViewController.m */; };
+		0267360D1B00915800DB42EC /* PLFittingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0267360C1B00915800DB42EC /* PLFittingViewController.m */; };
+		0267361F1B01989D00DB42EC /* FittingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0267361E1B01989D00DB42EC /* FittingViewController.m */; };
+		026736221B019A0500DB42EC /* IBFittingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026736211B019A0500DB42EC /* IBFittingViewController.m */; };
+		026736251B019A1700DB42EC /* PALFittingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026736241B019A1700DB42EC /* PALFittingViewController.m */; };
+		026736281B019A2500DB42EC /* MASFittingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026736271B019A2500DB42EC /* MASFittingViewController.m */; };
 		32884FE3960D9978F80C91BA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F0B04D49BB394862506928 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -60,8 +64,16 @@
 		025F851A1AFC5F9900E56BB0 /* EdgesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EdgesViewController.m; sourceTree = "<group>"; };
 		025F85201AFC957600E56BB0 /* PLEdgesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLEdgesViewController.h; sourceTree = "<group>"; };
 		025F85211AFC957600E56BB0 /* PLEdgesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLEdgesViewController.m; sourceTree = "<group>"; };
-		0267360B1B00915800DB42EC /* PLFitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLFitViewController.h; sourceTree = "<group>"; };
-		0267360C1B00915800DB42EC /* PLFitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLFitViewController.m; sourceTree = "<group>"; };
+		0267360B1B00915800DB42EC /* PLFittingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLFittingViewController.h; sourceTree = "<group>"; };
+		0267360C1B00915800DB42EC /* PLFittingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLFittingViewController.m; sourceTree = "<group>"; };
+		0267361D1B01989D00DB42EC /* FittingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FittingViewController.h; sourceTree = "<group>"; };
+		0267361E1B01989D00DB42EC /* FittingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FittingViewController.m; sourceTree = "<group>"; };
+		026736201B019A0500DB42EC /* IBFittingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBFittingViewController.h; sourceTree = "<group>"; };
+		026736211B019A0500DB42EC /* IBFittingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBFittingViewController.m; sourceTree = "<group>"; };
+		026736231B019A1700DB42EC /* PALFittingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PALFittingViewController.h; sourceTree = "<group>"; };
+		026736241B019A1700DB42EC /* PALFittingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PALFittingViewController.m; sourceTree = "<group>"; };
+		026736261B019A2500DB42EC /* MASFittingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASFittingViewController.h; sourceTree = "<group>"; };
+		026736271B019A2500DB42EC /* MASFittingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASFittingViewController.m; sourceTree = "<group>"; };
 		2D6299519C45DB8AA44CE83B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		73A730DA460A8DC40F7C8207 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F5F0B04D49BB394862506928 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +171,8 @@
 			children = (
 				025F85131AFB705D00E56BB0 /* IBEdgesViewController.h */,
 				025F85141AFB705D00E56BB0 /* IBEdgesViewController.m */,
+				026736201B019A0500DB42EC /* IBFittingViewController.h */,
+				026736211B019A0500DB42EC /* IBFittingViewController.m */,
 			);
 			name = "Interface Builder";
 			sourceTree = "<group>";
@@ -168,6 +182,8 @@
 			children = (
 				025F85101AFB659D00E56BB0 /* PALEdgesViewController.h */,
 				025F85111AFB659D00E56BB0 /* PALEdgesViewController.m */,
+				026736231B019A1700DB42EC /* PALFittingViewController.h */,
+				026736241B019A1700DB42EC /* PALFittingViewController.m */,
 			);
 			name = Programmatically;
 			sourceTree = "<group>";
@@ -177,8 +193,8 @@
 			children = (
 				025F85201AFC957600E56BB0 /* PLEdgesViewController.h */,
 				025F85211AFC957600E56BB0 /* PLEdgesViewController.m */,
-				0267360B1B00915800DB42EC /* PLFitViewController.h */,
-				0267360C1B00915800DB42EC /* PLFitViewController.m */,
+				0267360B1B00915800DB42EC /* PLFittingViewController.h */,
+				0267360C1B00915800DB42EC /* PLFittingViewController.m */,
 			);
 			name = PureLayout;
 			sourceTree = "<group>";
@@ -188,6 +204,8 @@
 			children = (
 				025F85161AFC5B2600E56BB0 /* MASEdgesViewController.h */,
 				025F85171AFC5B2600E56BB0 /* MASEdgesViewController.m */,
+				026736261B019A2500DB42EC /* MASFittingViewController.h */,
+				026736271B019A2500DB42EC /* MASFittingViewController.m */,
 			);
 			name = Masonry;
 			sourceTree = "<group>";
@@ -197,6 +215,8 @@
 			children = (
 				025F85191AFC5F9900E56BB0 /* EdgesViewController.h */,
 				025F851A1AFC5F9900E56BB0 /* EdgesViewController.m */,
+				0267361D1B01989D00DB42EC /* FittingViewController.h */,
+				0267361E1B01989D00DB42EC /* FittingViewController.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -353,15 +373,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				026736281B019A2500DB42EC /* MASFittingViewController.m in Sources */,
 				025F84ED1AFB5A7C00E56BB0 /* AppDelegate.m in Sources */,
+				026736251B019A1700DB42EC /* PALFittingViewController.m in Sources */,
 				025F84F01AFB5A7C00E56BB0 /* MasterViewController.m in Sources */,
 				025F84EA1AFB5A7C00E56BB0 /* main.m in Sources */,
+				026736221B019A0500DB42EC /* IBFittingViewController.m in Sources */,
+				0267361F1B01989D00DB42EC /* FittingViewController.m in Sources */,
 				025F85221AFC957600E56BB0 /* PLEdgesViewController.m in Sources */,
 				025F85151AFB705D00E56BB0 /* IBEdgesViewController.m in Sources */,
 				025F85181AFC5B2600E56BB0 /* MASEdgesViewController.m in Sources */,
 				025F85121AFB659D00E56BB0 /* PALEdgesViewController.m in Sources */,
 				025F84F31AFB5A7C00E56BB0 /* DetailViewController.m in Sources */,
-				0267360D1B00915800DB42EC /* PLFitViewController.m in Sources */,
+				0267360D1B00915800DB42EC /* PLFittingViewController.m in Sources */,
 				025F851B1AFC5F9900E56BB0 /* EdgesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,8 +510,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AutoLayoutDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -497,8 +523,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AutoLayoutDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

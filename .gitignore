@@ -1,0 +1,10 @@
+
+*.xccheckout
+
+*.xcuserstate
+
+*.xcscheme
+
+AutoLayoutDemo.xcodeproj/xcuserdata/chenhao.xcuserdatad/xcschemes/xcschememanagement.plist
+
+Pods/Pods.xcodeproj/xcuserdata/chenhao.xcuserdatad/xcschemes/xcschememanagement.plist

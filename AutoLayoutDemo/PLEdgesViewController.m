@@ -51,7 +51,8 @@
     [self.middleView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.topView withOffset:8];
     [self.middleView autoPinEdgeToSuperviewMargin:ALEdgeLeft];
     [self.middleView autoPinEdgeToSuperviewMargin:ALEdgeRight];
-    [self.middleView autoSetDimension:ALDimensionHeight toSize:120.];
+//    [self.middleView autoSetDimension:ALDimensionHeight toSize:120];
+    [self.middleView autoMatchDimension:ALDimensionHeight toDimension:ALDimensionWidth ofView:self.middleView withMultiplier:0.2];// 宽高比
 }
 
 - (void)didReceiveMemoryWarning {

@@ -25,6 +25,7 @@
 		026736221B019A0500DB42EC /* IBFittingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026736211B019A0500DB42EC /* IBFittingViewController.m */; };
 		026736251B019A1700DB42EC /* PALFittingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026736241B019A1700DB42EC /* PALFittingViewController.m */; };
 		026736281B019A2500DB42EC /* MASFittingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026736271B019A2500DB42EC /* MASFittingViewController.m */; };
+		027D7DBB1B0B16BF00C9A2C6 /* PALArrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 027D7DBA1B0B16BF00C9A2C6 /* PALArrayViewController.m */; };
 		32884FE3960D9978F80C91BA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F0B04D49BB394862506928 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,8 @@
 		026736241B019A1700DB42EC /* PALFittingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PALFittingViewController.m; sourceTree = "<group>"; };
 		026736261B019A2500DB42EC /* MASFittingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASFittingViewController.h; sourceTree = "<group>"; };
 		026736271B019A2500DB42EC /* MASFittingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASFittingViewController.m; sourceTree = "<group>"; };
+		027D7DB91B0B16BF00C9A2C6 /* PALArrayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PALArrayViewController.h; sourceTree = "<group>"; };
+		027D7DBA1B0B16BF00C9A2C6 /* PALArrayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PALArrayViewController.m; sourceTree = "<group>"; };
 		2D6299519C45DB8AA44CE83B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		73A730DA460A8DC40F7C8207 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F5F0B04D49BB394862506928 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,6 +198,8 @@
 				025F85211AFC957600E56BB0 /* PLEdgesViewController.m */,
 				0267360B1B00915800DB42EC /* PLFittingViewController.h */,
 				0267360C1B00915800DB42EC /* PLFittingViewController.m */,
+				027D7DB91B0B16BF00C9A2C6 /* PALArrayViewController.h */,
+				027D7DBA1B0B16BF00C9A2C6 /* PALArrayViewController.m */,
 			);
 			name = PureLayout;
 			sourceTree = "<group>";
@@ -377,6 +382,7 @@
 				025F84ED1AFB5A7C00E56BB0 /* AppDelegate.m in Sources */,
 				026736251B019A1700DB42EC /* PALFittingViewController.m in Sources */,
 				025F84F01AFB5A7C00E56BB0 /* MasterViewController.m in Sources */,
+				027D7DBB1B0B16BF00C9A2C6 /* PALArrayViewController.m in Sources */,
 				025F84EA1AFB5A7C00E56BB0 /* main.m in Sources */,
 				026736221B019A0500DB42EC /* IBFittingViewController.m in Sources */,
 				0267361F1B01989D00DB42EC /* FittingViewController.m in Sources */,

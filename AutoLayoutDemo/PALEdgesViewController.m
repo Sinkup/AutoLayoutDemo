@@ -22,7 +22,7 @@
     // 需将该属性置为NO，否则会发生冲突
     self.containerView.translatesAutoresizingMaskIntoConstraints = NO;
     
-    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1. constant:72];
+    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.topLayoutGuide attribute:NSLayoutAttributeBottom multiplier:1. constant:260];
     NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1. constant:-8];
     NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1. constant:16];
     NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:self.containerView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1. constant:-16];
@@ -44,6 +44,28 @@
     [self.containerView addSubview:view];
     [self.containerView addConstraints:@[ top, bottom, left, right ]];
     
+    NSLayoutConstraint *width = nil;
+    NSLayoutConstraint *height = nil;
+
+    // top view
+    top = [NSLayoutConstraint constraintWithItem:self.topView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.topLayoutGuide attribute:NSLayoutAttributeBottom multiplier:1. constant:8];
+    left = [NSLayoutConstraint constraintWithItem:self.topView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1. constant:16.];
+    width = [NSLayoutConstraint constraintWithItem:self.topView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1. constant:240.];
+    height = [NSLayoutConstraint constraintWithItem:self.topView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1. constant:100.];
+    
+    self.topView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.topView addConstraints:@[ width, height ]];
+    [self.view addConstraints:@[ top, left ]];
+    
+    // middle view
+    top = [NSLayoutConstraint constraintWithItem:self.middleView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.topView attribute:NSLayoutAttributeBottom multiplier:1. constant:8];
+    left = [NSLayoutConstraint constraintWithItem:self.middleView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeadingMargin multiplier:1. constant:0.];
+    right = [NSLayoutConstraint constraintWithItem:self.middleView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailingMargin multiplier:1. constant:0.];
+    height = [NSLayoutConstraint constraintWithItem:self.middleView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1. constant:120.];
+    
+    self.middleView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.middleView addConstraint:height];
+    [self.view addConstraints:@[ top, left, right ]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -77,7 +99,7 @@
             
             switch (constraint.firstAttribute) {
                 case NSLayoutAttributeTop:
-                    constraint.constant = 72;
+                    constraint.constant = 260;
                     break;
                 case NSLayoutAttributeBottom:
                     constraint.constant = -8;
@@ -101,10 +123,10 @@
             
             switch (constraint.firstAttribute) {
                 case NSLayoutAttributeTop:
-                    constraint.constant = 200;
+                    constraint.constant = 288;
                     break;
                 case NSLayoutAttributeBottom:
-                    constraint.constant = -200;
+                    constraint.constant = -24;
                     break;
                 case NSLayoutAttributeLeading:
                     constraint.constant = 100;

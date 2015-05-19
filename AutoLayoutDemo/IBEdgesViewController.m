@@ -48,7 +48,7 @@
             
             switch (constraint.firstAttribute) {
                 case NSLayoutAttributeTop:
-                    constraint.constant = 8;
+                    constraint.constant = 260;
                     break;
                 case NSLayoutAttributeBottom:
                     constraint.constant = -8;
@@ -72,10 +72,10 @@
             
             switch (constraint.firstAttribute) {
                 case NSLayoutAttributeTop:
-                    constraint.constant = 200;
+                    constraint.constant = 288;
                     break;
                 case NSLayoutAttributeBottom:
-                    constraint.constant = -200;
+                    constraint.constant = -24;
                     break;
                 case NSLayoutAttributeLeading:
                     constraint.constant = 100;
@@ -90,11 +90,16 @@
         }
     }
     
-//    [UIView animateWithDuration:0.5 animations:^{
-        [self.view layoutIfNeeded];
-//    } completion:^(BOOL finished) {
-        self.shrinked = !self.shrinked;
-//    }];
+    [UIView animateWithDuration:0.5
+                          delay:0
+         usingSpringWithDamping:0.6
+          initialSpringVelocity:0.8
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         [self.view layoutIfNeeded];
+                     } completion:^(BOOL finished) {
+                         self.shrinked = !finished ?: !self.shrinked;
+                     }];
 }
 
 @end

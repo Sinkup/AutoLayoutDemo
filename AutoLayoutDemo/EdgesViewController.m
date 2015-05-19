@@ -37,6 +37,29 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (UIView *)topView
+{
+    if (!_topView) {
+        _topView = [[UIView alloc] init];//WithFrame:UIEdgeInsetsInsetRect(self.view.bounds, UIEdgeInsetsMake(72, 16, 8, 16))
+        _topView.backgroundColor = [UIColor darkGrayColor];
+        
+        [self.view addSubview:_topView];
+    }
+    
+    return _topView;
+}
+
+- (UIView *)middleView
+{
+    if (!_middleView) {
+        _middleView = [[UIView alloc] init];//WithFrame:UIEdgeInsetsInsetRect(self.view.bounds, UIEdgeInsetsMake(72, 16, 8, 16))
+        _middleView.backgroundColor = [UIColor blueColor];
+        
+        [self.view addSubview:_middleView];
+    }
+    
+    return _middleView;
+}
 
 - (UIView *)containerView
 {

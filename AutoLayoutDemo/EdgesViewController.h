@@ -10,6 +10,8 @@
 
 @interface EdgesViewController : UIViewController
 
+@property (nonatomic, strong) UIView *topView;
+@property (nonatomic, strong) UIView *middleView;
 @property (nonatomic, strong) UIView *containerView;
 @property (nonatomic) BOOL shrinked;
 
